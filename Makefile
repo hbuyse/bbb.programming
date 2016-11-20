@@ -1,9 +1,9 @@
 # Verbosity
 V            ?= 0
 ifeq ($(V),1)
-    VERBOSE =
+	VERBOSE =
 else
-    VERBOSE = @
+	VERBOSE = @
 endif
 
 
@@ -12,16 +12,16 @@ all: gpio
 
 .PHONY: gpio
 gpio:
-    $(VERBOSE) $(MAKE) -C $@
+	$(VERBOSE) $(MAKE) -C $@
 
 
 clean:
-    $(VERBOSE) $(MAKE) -C ./gpio clean
+	$(VERBOSE) $(MAKE) -C ./gpio clean
 
 
 distclean:
-    $(VERBOSE) $(MAKE) -C ./gpio distclean
+	$(VERBOSE) $(MAKE) -C ./gpio distclean
 
 
 mrproper:
-    $(VERBOSE) $(MAKE) -C ./gpio mrproper
+	$(VERBOSE) $(MAKE) -C ./gpio mrproper
